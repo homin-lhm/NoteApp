@@ -5,6 +5,7 @@ class Test(unittest.TestCase):
     # 实例化
     # 定义环境变量
     # 定义接口变量
+    print('abc')
 
     def setUp(self) -> None:
         # 基于用户进行数据清理
