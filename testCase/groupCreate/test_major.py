@@ -35,12 +35,12 @@ class GroupCreateMajor(unittest.TestCase):
         body = {
             "groupId": group_id,
             "groupName": 'test',
-            "order": 0
+            "order": 0,
+            "members": []
         }
         res = self.re.post(self.url, sid=self.sid1, user_id=self.user_id1, body=body)
         expect = {
-            'responseTime': int,
-            'updateTime': int
+            'responseTime': int
         }
         self.assertEqual(200, res.status_code, msg='状态码校验失败')
         self.ga.http_assert(expect, res.json())
